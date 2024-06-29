@@ -47,3 +47,16 @@ img, video, svg { height: auto; max-width: 100%; }
 .che{
     color:green;
 }
+.cartaPerro{
+    background-color: #005959;
+    color: white;
+    font-weight: bold;
+    font-family: "Mochiy Pop P One", sans-serif;
+    text-align: center;
+}
+.cartaPerro:hover {
+    cursor: pointer;
+    background-color: #F2F2EB;
+    color: #404040;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}

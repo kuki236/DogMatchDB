@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     document.querySelector("#buscar").addEventListener('click', function () {
         borrarAnterior();
         obtenerFiltros();
+        mandarPaginaAdoptar();
     });
 });
 function obtenerCantidad(numero){
@@ -25,7 +26,17 @@ function obtenerFiltros() {
     mostrarCoincidencia(coincidencias);
         
 }
-
+function mandarPaginaAdoptar(){
+    const perroElegido = document.querySelectorAll('.cartaPerro');
+    perroElegido.forEach(perroElegidoClic => {
+        perroElegidoClic.addEventListener('click', function() {
+            abrirFormulario();
+        });
+    });
+}
+function abrirFormulario() {
+    window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSd8TwbGpfr58wXSMebmt9V-KAn3w5tNZrS2RUTkpu-krPeEzA/viewform?pli=1'; 
+}
 
 function mostrarCoincidencia(perrosEncontrados) {
     const $espacioPerros = document.querySelector("#espacioPerros");
