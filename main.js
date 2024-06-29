@@ -5,6 +5,9 @@ document.addEventListener('DOMContentLoaded', function () {
         obtenerFiltros();
     });
 });
+function obtenerCantidad(numero){
+    document.querySelector("#cantidad").textContent=numero;
+}
 function borrarAnterior() {
     document.querySelector("#espacioPerros").innerHTML = "";
 }
@@ -18,7 +21,7 @@ function obtenerFiltros() {
         (tamanoS === 'Tamaño' || perro.tamano === tamanoS) &&
         (edadS === 'Edad' || perro.rangoEdad == edadS)
     );
-
+   obtenerCantidad(coincidencias.length);
     mostrarCoincidencia(coincidencias);
         
 }
@@ -26,9 +29,6 @@ function obtenerFiltros() {
 
 function mostrarCoincidencia(perrosEncontrados) {
     const $espacioPerros = document.querySelector("#espacioPerros");
-    const cantidad = document.querySelector("#cantidad");
-    
-    cantidad.textContent = perros.length;
 
     if (perrosEncontrados.length > 0) {
         perrosEncontrados.forEach(perro => {
@@ -100,6 +100,7 @@ const perro28 = {
     src: "adop/28.png",
     rangoEdad: 3
 };
+
 const perro13 = {
     nombre: "Bono",
     sexo: "Macho",
@@ -143,7 +144,7 @@ const perro30 = {
 const perro36 = {
     nombre: "Romi",
     sexo: "Hembra",
-    tamano: "Mediana",
+    tamano: "Mediano",
     edad: "4 años",
     src: "adop/36.png",
     rangoEdad: 3
@@ -167,7 +168,7 @@ const perro67 = {
 const perro34 = {
     nombre: "Carmelita",
     sexo: "Hembra",
-    tamano: "Mediana",
+    tamano: "Mediano",
     edad: "4 años",
     src: "adop/34.png",
     rangoEdad: 3
@@ -175,7 +176,7 @@ const perro34 = {
 const perro25 = {
     nombre: "Tomasita",
     sexo: "Hembra",
-    tamano: "Mediana",
+    tamano: "Mediano",
     edad: "3 años",
     src: "adop/25.png",
     rangoEdad: 2
@@ -191,7 +192,7 @@ const perro22 = {
 const perro23 = {
     nombre: "Bambi",
     sexo: "Hembra",
-    tamano: "Mediana",
+    tamano: "Mediano",
     edad: "3 años",
     src: "adop/23.png",
     rangoEdad: 2
@@ -239,7 +240,7 @@ const perro60 = {
 const perro73 = {
     nombre: "Lima",
     sexo: "Hembra",
-    tamano: "Mediana",
+    tamano: "Mediano",
     edad: "3 años",
     src: "adop/73.png",
     rangoEdad: 2
@@ -271,7 +272,7 @@ const perro12 = {
 const perro75 = {
     nombre: "Tina",
     sexo: "Hembra",
-    tamano: "Pequeña",
+    tamano: "Pequeño",
     edad: "3 años",
     src: "adop/75.png",
     rangoEdad: 3
@@ -284,4 +285,76 @@ const perro69 = {
     src: "adop/69.png",
     rangoEdad: 1
 };
-const perros = [perro2, perro26, perro28, perro13, perro15, perro19, perro20, perro30, perro36, perro65, perro67, perro34, perro25, perro22, perro23, perro27, perro35, perro11, perro59, perro60, perro73, perro51, perro53, perro12, perro75, perro69];
+const perro10 = {
+    nombre: "Roger",
+    sexo: "Macho",
+    tamano: "Mediano",
+    edad: "7 años",
+    src: "adop/10.png",
+    rangoEdad: 3
+};
+const perro5 = {
+    nombre: "Will",
+    sexo: "Macho",
+    tamano: "Mediano",
+    edad: "3 años",
+    src: "adop/5.png",
+    rangoEdad: 2
+};
+const perro14 = {
+    nombre: "Pantro",
+    sexo: "Macho",
+    tamano: "Grande",
+    edad: "5 años",
+    src: "adop/14.png",
+    rangoEdad: 3
+};
+const perro74 = {
+    nombre: "Sur",
+    sexo: "Macho",
+    tamano: "Mediano",
+    edad: "6 años",
+    src: "adop/74.png",
+    rangoEdad: 3
+};
+const perro29 = {
+    nombre: "Dotty",
+    sexo: "Hembra",
+    tamano: "Mediano",
+    edad: "4 años",
+    src: "adop/29.png",
+    rangoEdad: 3
+};
+const perro31 = {
+    nombre: "Lalo",
+    sexo: "Macho",
+    tamano: "Mediano",
+    edad: "3 años",
+    src: "adop/31.png",
+    rangoEdad: 2
+};
+const perro37 = {
+    nombre: "Joey",
+    sexo: "Macho",
+    tamano: "Mediano",
+    edad: "1 años",
+    src: "adop/37.png",
+    rangoEdad: 1
+};
+const perro47 = {
+    nombre: "Codi",
+    sexo: "Macho",
+    tamano: "Mediano",
+    edad: "1 años",
+    src: "adop/47.png",
+    rangoEdad: 1
+};
+const perro68 = {
+    nombre: "Aura",
+    sexo: "Hembra",
+    tamano: "Mediano",
+    edad: "8 meses",
+    src: "adop/68.png",
+    rangoEdad: 1
+};
+const perros = [perro2, perro10,perro14,perro5,perro74,perro29,perro31,perro37,perro47,perro68,perro26, perro28, perro13, perro15, perro19, perro20, perro30, perro36, perro65, perro67, perro34, perro25, perro22, perro23, perro27, perro35, perro11, perro59, perro60, perro73, perro51, perro53, perro12, perro75, perro69];
