@@ -37,6 +37,23 @@ function mandarPaginaAdoptar(){
 function abrirFormulario() {
     window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSd8TwbGpfr58wXSMebmt9V-KAn3w5tNZrS2RUTkpu-krPeEzA/viewform?pli=1'; 
 }
+const today = new Date();
+
+const year = today.getFullYear();
+function obtenerEdad(anoNacimiento) {
+    const edad = year - anoNacimiento; 
+    return `${edad} años`; 
+}
+function obtenerRango(anoNacimiento){
+    const edadRango = year - anoNacimiento; 
+
+    if(edadRango>=1 && edadRango<=3){
+        return 2;
+    }else{
+        return 3;
+    }
+
+}
 
 function mostrarCoincidencia(perrosEncontrados) {
     const $espacioPerros = document.querySelector("#espacioPerros");
@@ -91,82 +108,81 @@ const perro2 = {
     nombre: "Thomas",
     sexo: "Macho",
     tamano: "Mediano",
-    edad: "5 años",
+    edad: obtenerEdad(2019),
     src: "adop/2.png",
-    rangoEdad: 3
+    rangoEdad: obtenerRango(2019)
 };
 const perro26 = {
     nombre: "Clint",
     sexo: "Macho",
     tamano: "Pequeño",
-    edad: "4 años",
+    edad: obtenerEdad(2020),
     src: "adop/26.png",
-    rangoEdad: 3
+    rangoEdad: obtenerRango(2020)
 };
 const perro28 = {
     nombre: "Leo",
     sexo: "Macho",
     tamano: "Mediano",
-    edad: "5 años",
+    edad: obtenerEdad(2019),
     src: "adop/28.png",
-    rangoEdad: 3
+    rangoEdad: obtenerRango(2019)
 };
-
 const perro13 = {
     nombre: "Bono",
     sexo: "Macho",
     tamano: "Grande",
-    edad: "4.5 años",
+    edad: obtenerEdad(2020),
     src: "adop/13.png",
-    rangoEdad: 3
+    rangoEdad: obtenerRango(2020)
 };
 const perro15 = {
     nombre: "Max",
     sexo: "Macho",
     tamano: "Mediano",
-    edad: "6 años",
+    edad: obtenerEdad(2018),
     src: "adop/15.png",
-    rangoEdad: 3
+    rangoEdad: obtenerRango(2018)
 };
 const perro19 = {
     nombre: "Alfie",
     sexo: "Macho",
     tamano: "Pequeño",
-    edad: "4 años",
+    edad: obtenerEdad(2020),
     src: "adop/19.png",
-    rangoEdad: 3
+    rangoEdad: obtenerRango(2020)
 };
 const perro20 = {
     nombre: "Gringo",
     sexo: "Macho",
     tamano: "Grande",
-    edad: "4.5 años",
+    edad: obtenerEdad(2020),
     src: "adop/20.png",
-    rangoEdad: 3
+    rangoEdad: obtenerRango(2020)
 };
 const perro30 = {
     nombre: "Tigre",
     sexo: "Macho",
     tamano: "Mediano",
-    edad: "3 años",
+    edad: obtenerEdad(2021),
     src: "adop/30.png",
-    rangoEdad: 2
+    rangoEdad: obtenerRango(2021)
 };
 const perro36 = {
     nombre: "Romi",
     sexo: "Hembra",
     tamano: "Mediano",
-    edad: "4 años",
+    edad: obtenerEdad(2020),
     src: "adop/36.png",
-    rangoEdad: 3
+    rangoEdad: obtenerRango(2020)
 };
 const perro65 = {
     nombre: "Lauro",
     sexo: "Macho",
     tamano: "Mediano",
-    edad: "3 años",
+    edad: obtenerEdad(2021),
     src: "adop/65.png",
-    rangoEdad: 2
+    rangoEdad: obtenerRango(2021)
 };
 const perro67 = {
     nombre: "Toño",
@@ -180,113 +196,113 @@ const perro34 = {
     nombre: "Carmelita",
     sexo: "Hembra",
     tamano: "Mediano",
-    edad: "4 años",
+    edad: obtenerEdad(2020),
     src: "adop/34.png",
-    rangoEdad: 3
+    rangoEdad: obtenerRango(2020)
 };
 const perro25 = {
     nombre: "Tomasita",
     sexo: "Hembra",
     tamano: "Mediano",
-    edad: "3 años",
+    edad: obtenerEdad(2021),
     src: "adop/25.png",
-    rangoEdad: 2
+    rangoEdad: obtenerRango(2021)
 };
 const perro22 = {
     nombre: "Brunito",
     sexo: "Macho",
     tamano: "Mediano",
-    edad: "4 años",
+    edad: obtenerEdad(2020),
     src: "adop/22.png",
-    rangoEdad: 3
+    rangoEdad: obtenerRango(2020)
 };
 const perro23 = {
     nombre: "Bambi",
     sexo: "Hembra",
     tamano: "Mediano",
-    edad: "3 años",
+    edad: obtenerEdad(2021),
     src: "adop/23.png",
-    rangoEdad: 2
+    rangoEdad: obtenerRango(2021)
 };
 const perro27 = {
     nombre: "Charlie",
     sexo: "Macho",
     tamano: "Mediano",
-    edad: "5 años",
+    edad: obtenerEdad(2019),
     src: "adop/27.png",
-    rangoEdad: 3
+    rangoEdad: obtenerRango(2019)
 };
 const perro35 = {
     nombre: "Manu",
     sexo: "Macho",
     tamano: "Pequeño",
-    edad: "3 años",
+    edad: obtenerEdad(2021),
     src: "adop/35.png",
-    rangoEdad: 2
+    rangoEdad: obtenerRango(2021)
 };
 const perro11 = {
     nombre: "Soco",
     sexo: "Macho",
     tamano: "Mediano",
-    edad: "7 años",
+    edad: obtenerEdad(2021),
     src: "adop/11.png",
-    rangoEdad: 3
+    rangoEdad: obtenerRango(2021)
 };
 const perro59 = {
     nombre: "Faber",
     sexo: "Macho",
     tamano: "Grande",
-    edad: "3 años",
+    edad: obtenerEdad(2021),
     src: "adop/59.png",
-    rangoEdad: 3
+    rangoEdad: obtenerRango(2021)
 };
 const perro60 = {
     nombre: "Fabi",
     sexo: "Hembra",
     tamano: "Grande",
-    edad: "3 años",
+    edad: obtenerEdad(2021),
     src: "adop/60.png",
-    rangoEdad: 2
+    rangoEdad: obtenerRango(2021)
 };
 const perro73 = {
     nombre: "Lima",
     sexo: "Hembra",
     tamano: "Mediano",
-    edad: "3 años",
+    edad: obtenerEdad(2021),
     src: "adop/73.png",
-    rangoEdad: 2
+    rangoEdad: obtenerRango(2021)
 };
 const perro51 = {
     nombre: "Tommy",
     sexo: "Macho",
     tamano: "Mediano",
-    edad: "1 año",
+    edad: obtenerEdad(2023),
     src: "adop/51.png",
-    rangoEdad: 2
+    rangoEdad: obtenerRango(2023)
 };
 const perro53 = {
     nombre: "Jerry",
     sexo: "Macho",
     tamano: "Pequeño",
-    edad: "4.5 años",
+    edad: obtenerEdad(2020),
     src: "adop/53.png",
-    rangoEdad: 3
+    rangoEdad: obtenerRango(2020)
 };
 const perro12 = {
     nombre: "Bartolito",
     sexo: "Macho",
     tamano: "Grande",
-    edad: "4 años",
+    edad: obtenerEdad(2020),
     src: "adop/12.png",
-    rangoEdad: 3
+    rangoEdad: obtenerRango(2020)
 };
 const perro75 = {
     nombre: "Tina",
     sexo: "Hembra",
     tamano: "Pequeño",
-    edad: "3 años",
+    edad: obtenerEdad(2021),
     src: "adop/75.png",
-    rangoEdad: 3
+    rangoEdad: obtenerRango(2021)
 };
 const perro69 = {
     nombre: "Luna",
@@ -300,65 +316,65 @@ const perro10 = {
     nombre: "Roger",
     sexo: "Macho",
     tamano: "Mediano",
-    edad: "7 años",
+    edad: obtenerEdad(2017),
     src: "adop/10.png",
-    rangoEdad: 3
+    rangoEdad: obtenerRango(2017)
 };
 const perro5 = {
     nombre: "Will",
     sexo: "Macho",
     tamano: "Mediano",
-    edad: "3 años",
+    edad: obtenerEdad(2021),
     src: "adop/5.png",
-    rangoEdad: 2
+    rangoEdad: obtenerRango(2021)
 };
 const perro14 = {
     nombre: "Pantro",
     sexo: "Macho",
     tamano: "Grande",
-    edad: "5 años",
+    edad: obtenerEdad(2019),
     src: "adop/14.png",
-    rangoEdad: 3
+    rangoEdad: obtenerRango(2019)
 };
 const perro74 = {
     nombre: "Sur",
     sexo: "Macho",
     tamano: "Mediano",
-    edad: "6 años",
+    edad: obtenerEdad(2018),
     src: "adop/74.png",
-    rangoEdad: 3
+    rangoEdad: obtenerRango(2018)
 };
 const perro29 = {
     nombre: "Dotty",
     sexo: "Hembra",
     tamano: "Mediano",
-    edad: "4 años",
+    edad: obtenerEdad(2020),
     src: "adop/29.png",
-    rangoEdad: 3
+    rangoEdad: obtenerRango(2020)
 };
 const perro31 = {
     nombre: "Lalo",
     sexo: "Macho",
     tamano: "Mediano",
-    edad: "3 años",
+    edad: obtenerEdad(2021),
     src: "adop/31.png",
-    rangoEdad: 2
+    rangoEdad: obtenerRango(2021)
 };
 const perro37 = {
     nombre: "Joey",
     sexo: "Macho",
     tamano: "Mediano",
-    edad: "1 años",
+    edad: obtenerEdad(2023),
     src: "adop/37.png",
-    rangoEdad: 1
+    rangoEdad: obtenerRango(2023)
 };
 const perro47 = {
     nombre: "Codi",
     sexo: "Macho",
     tamano: "Mediano",
-    edad: "1 años",
+    edad: obtenerEdad(2023),
     src: "adop/47.png",
-    rangoEdad: 1
+    rangoEdad: obtenerRango(2023)
 };
 const perro68 = {
     nombre: "Aura",
